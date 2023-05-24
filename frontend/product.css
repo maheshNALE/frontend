@@ -1,0 +1,270 @@
+.dropbtn {
+    margin-top: 30px;
+    background-color: white;
+    /* color: white; */
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content div{
+    width: 250px;
+  }
+  
+  .dropdown-content {
+    width: auto;
+    display: none;
+    position: absolute;
+    background-color: #F1F1F1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown:hover .dropdown-content {display: flex;}
+  .dropdown:hover .dropbtn {background-color: #cad0ce;}
+
+.dropdown-content h2{
+    padding: 10px;
+    padding-left: 20px;
+    color: #ff3f6c;
+}
+
+
+
+body{
+    width: 90%;
+    margin: auto;
+}
+.left img{
+    width: 120px;
+    margin-top: 18px;
+   
+}
+
+
+
+body{
+    width: 90%;
+    margin: auto;
+}
+.left img{
+    width: 120px;
+    margin-top: 18px;
+   
+}
+#append{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+#addingleft input{
+    display: inline;
+}
+.sortinput{
+    display: flex;
+    justify-content: flex-end;
+    height: 35px;
+    padding: 20px;
+    padding-left: 30px;
+
+   
+}
+.space{
+    justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+    gap: 20px;
+}
+.playstoreimg img{
+    width: 180px;
+    height: 52px;
+   margin-right: 30px;
+   margin-top: 20px;
+}
+.playstoreimg{
+    display: flex;
+   
+}
+
+.footpara {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer{
+   
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+   
+  
+}
+
+footer p{
+    font-size: 20px;
+    
+}
+.footpara h2{
+    margin-top: 50px;
+  
+}
+.sortinput p{
+   margin-right: 20px;
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+.sortinput select{
+    width: 250px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+#addingleft{
+    width: 300px;
+}
+ion-icon {
+    font-size: 28px;
+  }
+  #addcart{
+    height: 42px;
+    width: 200px;
+  color: white;
+  background-color: #ff3f6c;
+  border: none;
+  margin-left: 120px;
+  margin-bottom: 30px;
+
+  }
+#profile #bag #wishlist{
+    margin-right: 10px;
+    margin-top: 0px;
+    padding: 0px;
+   }
+#append div{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 20px;
+    width: 85%;
+}
+div>img{
+   
+    width: 90%;
+}
+#append div span{
+    font-size: 23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    padding-top: 20px;
+}
+
+
+#wish{
+    
+    margin-left: 380px;
+    margin-bottom: 30px;
+    width: 65px;
+  
+}
+#bodypage{
+    display: flex;
+    justify-content: space-between;
+}
+ 
+
+.bold div:nth-child(2) img{
+    width: 48px;
+    margin-left: 0;
+    padding: 0;
+}
+#sideimg{
+    display: flex;
+    margin-top: 60px;
+    justify-content: flex-end;
+    position: fixed;
+    align-items: flex-end;
+    margin-left: 2000px;
+}
+.bold div:nth-child(3) img{
+    width: 58px;
+    margin-left: 0;
+    padding: 0;
+}
+
+#icons img{
+    margin: 10px;
+    margin-left: 0;
+    padding: 0;
+}
+
+
+.right img{
+    width: 60px;
+}
+.space{
+    justify-content: space-between;
+}
+.footpara {
+    display: flex;
+    justify-content: space-evenly;
+}
+.flex{
+    display: flex;
+    gap: 20px;
+}
+
+
+header{
+    padding: 0px 120px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+nav ul li{
+    list-style: none;
+}
+
+*{
+    font-size: 18px;
+    color: rgb(59, 57, 57);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.bold{
+    font-weight: bold;
+    font-size: 35px;
+    color: rgb(59, 57, 57);
+    padding: 6px 15px;
+    align-items: center;
+    justify-content: center;
+}
+#addingleft{
+   margin-left: 0px;
+   margin-right: 40px;
+}
+.right input{
+    border: 0.5px;
+    border-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    width: 500px;
+    background-color: #f8f8f8;
+    height: 50px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  padding-left: 15px;
+  border-radius: 5px;
+  
+}
