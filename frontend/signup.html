@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    
+    .form-container h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    .form-container input[type="date"],
+    .form-container input[type="number"],
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: none;
+    }
+    
+    .form-container input[type="submit"] {
+      background-color: black;
+  color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      
+  margin: 20px;
+  font-weight: bold;
+}
+   
+    
+    .form-container input[type="submit"]:hover {
+      background-color: rgb(173, 172, 172);
+      color: black;
+      border-width: 2px;
+      border-color: black;
+      
+    }
+    
+    .form-container a {
+      color: black;
+      text-decoration: underline;
+    
+    }
+    
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+    form input{
+      font-size: 18px;
+    }
+    #flx{
+      display: flex;
+      justify-content: center;
+      font-size: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav> 
+    <div class="logo">
+
+        <img id="footlogo" class="d-inline-block align-top" src="https://i.ibb.co/j8FHftt/Screenshot-1065.png" alt="Screenshot-1065"
+            border="0" height="80px" width="90px" />
+             <h1> KADAM</h1></div>
+
+<ul class="nav-links">
+<li class="">
+    <a href="#" class="active">
+        NEW ARRIVALS
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        MEN'S
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        WOMEN'S
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        KIDS'
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        CLOTHING
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        FAN SHOP
+    </a>
+</li>
+
+<li class="">
+    <a href="#" class="active">
+        RELEASES
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        BRANDS
+    </a>
+</li>
+<li class="">
+    <a href="#" class="active">
+        SALE
+    </a>
+</li>
+</ul>
+
+<div class="search-container">
+<input class="hideinput" type="text" placeholder="Search...">
+<button class="hideinput"  type="submit"><i class="fa fa-search"> </i><img id="magnify"  src="https://tse1.mm.bing.net/th?id=OIP.1MH3JofIYhNGZSPQt8sbvAHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121" alt=""></button>
+<ion-icon name="heart-outline"></ion-icon>
+<ion-icon name="cart-outline"></ion-icon>
+</div>
+<div class="hamburger" >
+<div class="line" style="margin-top: 0px;"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+</nav>
+<h1 id="flx">Join FLX Rewards</h1>
+  <div class="form-container">
+    <h2 style="margin-top: 20px; margin-bottom: 20px">Account Details</h2>
+    <form>
+      <input id="firstname" type="text" name="first_name" placeholder="First Name" required>
+      <input id="lastname"  type="text" name="last_name" placeholder="Last Name" required>
+      <input id="mmddyy"  type="date" name="date_of_birth" placeholder="Date of Birth" required>
+      <input id="zipcode"  type="number" name="zip_code" placeholder="Zip Code" required>
+      <select id="gender"  style="font-size: 18px;" name="gender" required>
+        <option  value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+   
+    
+
+    <h2 style="margin-top: 20px; margin-bottom: 20px;">Account Information</h2>
+   
+      <input id="email"  type="email" name="email" placeholder="Email Address" required>
+      <input id="password"  type="password" name="password" placeholder="Password" required>
+      <input id="mobilenumber"  type="number" name="mobile_number" placeholder="Mobile Number" required>
+      <input type="submit" value="Sign Up">
+    </form>
+    
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+</body>
+</html>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links li');
+
+hamburger.addEventListener('click', () => {
+// Toggle the nav-links class to show or hide the navigation links
+navLinks.classList.toggle('nav-active');
+
+// Add animation to each navigation link when the hamburger menu is clicked
+links.forEach((link, index) => {
+  if (link.style.animation) {
+    link.style.animation = '';
+  } else {
+    link.style.animation = `fadeIn 0.5s ease-in forwards ${index / 7 + 0.3}s`;
+  }
+});
+
+// Animate the hamburger menu to become an X icon
+hamburger.classList.toggle('toggle');
+});
+
+
+
+
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+    var firstname=document.getElementById("firstname").value
+   const payload = {
+       firstname:document.getElementById("firstname").value,
+        lastname:document.getElementById("lastname").value,
+       mmddyy:document.getElementById("mmddyy").value,
+        zipcode:document.getElementById("zipcode").value,
+       gender:document.getElementById("gender").value,
+       email:document.getElementById("email").value,
+       password:document.getElementById("password").value,
+       mobilenumber:document.getElementById("mobilenumber").value,
+  
+   }
+
+
+   fetch("http://localhost:8000/users/register",{
+       method:"POST",
+       headers:{"content-type":"application/json"},
+       body:JSON.stringify(payload)
+   
+   }).then(res=> res.json())
+   
+   .then(res=>
+   
+   
+   console.log(res))
+   .catch(res=>console.log(res))
+   
+      alert("thakyou for register")
+      window.location.assign("./login.html")
+  
+    });
+
+
+
+  
+</script> 
