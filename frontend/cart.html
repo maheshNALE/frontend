@@ -1,1 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="product.css"> -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/j8FHftt/Screenshot-1065.png">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* h1{
+        color: red;
+    } */
+
+        #leftbox {
+            margin-left: 60PX;
+        }
+
+        #leftbox span {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        #leftbox div {
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        .newarr {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .newarr+h4 {
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            color: rgb(80, 79, 79);
+            margin-left: 0px;
+        }
+
+        .newarr+h4+h2 {
+            font-size: 25px;
+            margin: 45px auto 20px auto;
+        }
+
+        #checklocation p {
+            font-size: 23px;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+
+        #checklocation input {
+            width: 28px;
+            margin-right: 5px;
+        }
+
+        #checklocation ion-icon {
+            margin-left: 40px;
+            margin-top: 5px;
+            font-size: 35px;
+            color: black;
+        }
+
+        #checklocation {
+            padding: 20px 40px 20px 40px;
+            width: 350px;
+            height: 100px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+
+        }
+
+        #append {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 20px;
+
+        }
+
+        #append div {
+            width: 90%;
+            height: auto;
+            gap: 2%;
+            margin: 10%;
+            padding: 15px;
+            margin-top: 40px;
+            padding-bottom: 30px;
+            padding-top: 0px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        }
+
+        #append div:hover {
+            border: 1px solid black;
+        }
+
+        #append span {
+            display: block;
+        }
+
+        /* img{
+        margin-top: 30px;
+           width: 90%;
+           height: auto;
+        } */
+        #append img {
+            margin-top: 40px;
+
+        }
+
+        #wish {
+            margin-top: 15px;
+            width: 50px;
+            height: auto;
+            margin-left: 170px;
+
+        }
+
+        #productimage {
+            margin-bottom: 50px;
+            height: 180px;
+            margin-top: 30px;
+            width: 90%;
+
+
+        }
+
+        #newbt {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            font-size: 18px;
+        }
+
+        #append {
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        #productname {
+            font-size: 20px;
+            margin: 20px 10px 80px 10px;
+
+        }
+
+        #append h3 {
+            margin: 20px 10px 15px 5px;
+        }
+
+        #append span {
+            margin: 20px 10px 15px 5px;
+        }
+
+        #cartorder {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 50px;
+
+        }
+
+        #appendandorder {
+            justify-content: space-evenly;
+        }
+
+        .summaryflex {
+            display: flex;
+            margin: 20px;
+
+        }
+
+        .summaryflex h1 {
+            font-size: 20px;
+            margin-top: 10px;
+
+        }
+
+        .summaryflex p {
+            font-size: 18px;
+            margin-top: 10px;
+
+        }
+
+        .summaryflex div:nth-child(1) {
+            width: 200px;
+        }
+
+        .summaryflex div:nth-child(2) {
+            margin-left: 200px;
+        }
+
+        #gpayimg {
+            width: 50px;
+        }
+        #checkoutbutton{
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 50px;
+
+        }
+        #checkoutbutton p{
+margin: 5px auto 20px auto;
+font-size: 17px;
+
+        }
+        .signbt{
+background-color: black;
+color: white;
+width: 90%;
+margin: auto;
+height: 50px;
+font-size: 20px;
+        }
+        .guestchekoutbt{
+            
+   background-color: white;
+width: 90%;
+margin: 30px auto 30px auto;
+
+height: 50px;
+font-size: 20px;
+        }
+        #paypallogo{
+            padding: 30px;
+            width: 90%;
+          display: flex;
+          padding: 12px 140px 0px 130px;
+          background-color: #eeeeee;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        #paypallogo p{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+       
+        /* <div id="buygpay">Buy With
+                        <img id="gpayimg"
+                            src="https://tse4.mm.bing.net/th?id=OIP.kB7pr4BNpOmSi9IxBePqIwHaD4&pid=Api&P=0" alt="">
+                    </div> */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="top">
+            <h3>Find a Store <img id="arrow"
+                    src="https://tse1.mm.bing.net/th?id=OIP.2bYrkiqsIIjXgzU76_YtLAHaEP&pid=Api&rs=1&c=1&qlt=95&w=184&h=105"
+                    alt="">
+            </h3>
+            <h3> Welcome, Sign In </h3>
+            <h3>Customer Service</h3>
+
+
+        </div>
+
+        <nav>
+            <div class="logo">
+
+                <img id="footlogo" class="d-inline-block align-top" src="https://i.ibb.co/j8FHftt/Screenshot-1065.png"
+                    alt="Screenshot-1065" border="0" height="80px" width="90px" />
+                <h1> KADAM</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li class="">
+                    <a href="#" class="active">
+                        NEW ARRIVALS
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        MEN'S
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        WOMEN'S
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        KIDS'
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        CLOTHING
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        FAN SHOP
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#" class="active">
+                        RELEASES
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        BRANDS
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="active">
+                        SALE
+                    </a>
+                </li>
+            </ul>
+
+            <div class="search-container">
+                <input class="hideinput" type="text" placeholder="Search..." id="searchproducts">
+                <button class="hideinput" type="submit"><i class="fa fa-search"> </i><img id="magnify"
+                        src="https://tse1.mm.bing.net/th?id=OIP.1MH3JofIYhNGZSPQt8sbvAHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121"
+                        alt=""></button>
+                <ion-icon style="font-size: 30px;" name="heart-outline"></ion-icon>
+               
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div id="body">
+
+        <H1 style="margin: 30px;">
+            MY CART
+        </H1>
+
+        <div class="flex" id="appendandorder">
+            <div id="append">
+
+
+            </div>
+            <div >
+                <div id="cartorder">
+                    <h1>Order Summary</h1>
+                    <div class="summaryflex">
+                        <div>
+                            <h1>SUBTOTAL:</h1>
+                            <p>item</p>
+                        </div>
+                        <div>$</div>
+                    </div>
+                    <hr>
+                    <div class="summaryflex">
+                        <div>
+                            <H1>SHIPPING:</H1>
+                            <p>Edit Shipping</p>
+                        </div>
+                        <div>TBD</div>
+                    </div>
+                    <hr>
+                    <div class="summaryflex">
+                        <div>
+                            <H1>DISCOUNTS:</H1>
+                            <p>Add Promo Code</p>
+                        </div>
+                        <div>$</div>
+                    </div>
+                    <hr>
+                    <div class="summaryflex">
+                        <div>
+                            <H1>ESTIMATED TOTAL:</H1>
+                            <p>Tax calculated in Checkout</p>
+                        </div>
+                        <div>$</div>
+                    </div>
+                </div>
+                <div id="checkoutbutton">
+
+                    <p>By clicking "checkout" or another payment method,
+                    </p>
+                        <p> I agree to the Terms Of Use and Privacy
+                        Statement.
+                    </p>
+
+                    <button class="signbt">SIGN UP</button>
+                    <Button class="guestchekoutbt">GUEST CHECKOUT</Button>
+                    <hr>
+                    <div id="paypallogo">
+                        <div>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMTAwIDMyIiB4bWxucz0iaHR0cDomI3gyRjsmI3gyRjt3d3cudzMub3JnJiN4MkY7MjAwMCYjeDJGO3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSAxMiA0LjkxNyBMIDQuMiA0LjkxNyBDIDMuNyA0LjkxNyAzLjIgNS4zMTcgMy4xIDUuODE3IEwgMCAyNS44MTcgQyAtMC4xIDI2LjIxNyAwLjIgMjYuNTE3IDAuNiAyNi41MTcgTCA0LjMgMjYuNTE3IEMgNC44IDI2LjUxNyA1LjMgMjYuMTE3IDUuNCAyNS42MTcgTCA2LjIgMjAuMjE3IEMgNi4zIDE5LjcxNyA2LjcgMTkuMzE3IDcuMyAxOS4zMTcgTCA5LjggMTkuMzE3IEMgMTQuOSAxOS4zMTcgMTcuOSAxNi44MTcgMTguNyAxMS45MTcgQyAxOSA5LjgxNyAxOC43IDguMTE3IDE3LjcgNi45MTcgQyAxNi42IDUuNjE3IDE0LjYgNC45MTcgMTIgNC45MTcgWiBNIDEyLjkgMTIuMjE3IEMgMTIuNSAxNS4wMTcgMTAuMyAxNS4wMTcgOC4zIDE1LjAxNyBMIDcuMSAxNS4wMTcgTCA3LjkgOS44MTcgQyA3LjkgOS41MTcgOC4yIDkuMzE3IDguNSA5LjMxNyBMIDkgOS4zMTcgQyAxMC40IDkuMzE3IDExLjcgOS4zMTcgMTIuNCAxMC4xMTcgQyAxMi45IDEwLjUxNyAxMy4xIDExLjIxNyAxMi45IDEyLjIxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSAzNS4yIDEyLjExNyBMIDMxLjUgMTIuMTE3IEMgMzEuMiAxMi4xMTcgMzAuOSAxMi4zMTcgMzAuOSAxMi42MTcgTCAzMC43IDEzLjYxNyBMIDMwLjQgMTMuMjE3IEMgMjkuNiAxMi4wMTcgMjcuOCAxMS42MTcgMjYgMTEuNjE3IEMgMjEuOSAxMS42MTcgMTguNCAxNC43MTcgMTcuNyAxOS4xMTcgQyAxNy4zIDIxLjMxNyAxNy44IDIzLjQxNyAxOS4xIDI0LjgxNyBDIDIwLjIgMjYuMTE3IDIxLjkgMjYuNzE3IDIzLjggMjYuNzE3IEMgMjcuMSAyNi43MTcgMjkgMjQuNjE3IDI5IDI0LjYxNyBMIDI4LjggMjUuNjE3IEMgMjguNyAyNi4wMTcgMjkgMjYuNDE3IDI5LjQgMjYuNDE3IEwgMzIuOCAyNi40MTcgQyAzMy4zIDI2LjQxNyAzMy44IDI2LjAxNyAzMy45IDI1LjUxNyBMIDM1LjkgMTIuNzE3IEMgMzYgMTIuNTE3IDM1LjYgMTIuMTE3IDM1LjIgMTIuMTE3IFogTSAzMC4xIDE5LjMxNyBDIDI5LjcgMjEuNDE3IDI4LjEgMjIuOTE3IDI1LjkgMjIuOTE3IEMgMjQuOCAyMi45MTcgMjQgMjIuNjE3IDIzLjQgMjEuOTE3IEMgMjIuOCAyMS4yMTcgMjIuNiAyMC4zMTcgMjIuOCAxOS4zMTcgQyAyMy4xIDE3LjIxNyAyNC45IDE1LjcxNyAyNyAxNS43MTcgQyAyOC4xIDE1LjcxNyAyOC45IDE2LjExNyAyOS41IDE2LjcxNyBDIDMwIDE3LjQxNyAzMC4yIDE4LjMxNyAzMC4xIDE5LjMxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSA1NS4xIDEyLjExNyBMIDUxLjQgMTIuMTE3IEMgNTEgMTIuMTE3IDUwLjcgMTIuMzE3IDUwLjUgMTIuNjE3IEwgNDUuMyAyMC4yMTcgTCA0My4xIDEyLjkxNyBDIDQzIDEyLjQxNyA0Mi41IDEyLjExNyA0Mi4xIDEyLjExNyBMIDM4LjQgMTIuMTE3IEMgMzggMTIuMTE3IDM3LjYgMTIuNTE3IDM3LjggMTMuMDE3IEwgNDEuOSAyNS4xMTcgTCAzOCAzMC41MTcgQyAzNy43IDMwLjkxNyAzOCAzMS41MTcgMzguNSAzMS41MTcgTCA0Mi4yIDMxLjUxNyBDIDQyLjYgMzEuNTE3IDQyLjkgMzEuMzE3IDQzLjEgMzEuMDE3IEwgNTUuNiAxMy4wMTcgQyA1NS45IDEyLjcxNyA1NS42IDEyLjExNyA1NS4xIDEyLjExNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny41IDQuOTE3IEwgNTkuNyA0LjkxNyBDIDU5LjIgNC45MTcgNTguNyA1LjMxNyA1OC42IDUuODE3IEwgNTUuNSAyNS43MTcgQyA1NS40IDI2LjExNyA1NS43IDI2LjQxNyA1Ni4xIDI2LjQxNyBMIDYwLjEgMjYuNDE3IEMgNjAuNSAyNi40MTcgNjAuOCAyNi4xMTcgNjAuOCAyNS44MTcgTCA2MS43IDIwLjExNyBDIDYxLjggMTkuNjE3IDYyLjIgMTkuMjE3IDYyLjggMTkuMjE3IEwgNjUuMyAxOS4yMTcgQyA3MC40IDE5LjIxNyA3My40IDE2LjcxNyA3NC4yIDExLjgxNyBDIDc0LjUgOS43MTcgNzQuMiA4LjAxNyA3My4yIDYuODE3IEMgNzIgNS42MTcgNzAuMSA0LjkxNyA2Ny41IDQuOTE3IFogTSA2OC40IDEyLjIxNyBDIDY4IDE1LjAxNyA2NS44IDE1LjAxNyA2My44IDE1LjAxNyBMIDYyLjYgMTUuMDE3IEwgNjMuNCA5LjgxNyBDIDYzLjQgOS41MTcgNjMuNyA5LjMxNyA2NCA5LjMxNyBMIDY0LjUgOS4zMTcgQyA2NS45IDkuMzE3IDY3LjIgOS4zMTcgNjcuOSAxMC4xMTcgQyA2OC40IDEwLjUxNyA2OC41IDExLjIxNyA2OC40IDEyLjIxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC43IDEyLjExNyBMIDg3IDEyLjExNyBDIDg2LjcgMTIuMTE3IDg2LjQgMTIuMzE3IDg2LjQgMTIuNjE3IEwgODYuMiAxMy42MTcgTCA4NS45IDEzLjIxNyBDIDg1LjEgMTIuMDE3IDgzLjMgMTEuNjE3IDgxLjUgMTEuNjE3IEMgNzcuNCAxMS42MTcgNzMuOSAxNC43MTcgNzMuMiAxOS4xMTcgQyA3Mi44IDIxLjMxNyA3My4zIDIzLjQxNyA3NC42IDI0LjgxNyBDIDc1LjcgMjYuMTE3IDc3LjQgMjYuNzE3IDc5LjMgMjYuNzE3IEMgODIuNiAyNi43MTcgODQuNSAyNC42MTcgODQuNSAyNC42MTcgTCA4NC4zIDI1LjYxNyBDIDg0LjIgMjYuMDE3IDg0LjUgMjYuNDE3IDg0LjkgMjYuNDE3IEwgODguMyAyNi40MTcgQyA4OC44IDI2LjQxNyA4OS4zIDI2LjAxNyA4OS40IDI1LjUxNyBMIDkxLjQgMTIuNzE3IEMgOTEuNCAxMi41MTcgOTEuMSAxMi4xMTcgOTAuNyAxMi4xMTcgWiBNIDg1LjUgMTkuMzE3IEMgODUuMSAyMS40MTcgODMuNSAyMi45MTcgODEuMyAyMi45MTcgQyA4MC4yIDIyLjkxNyA3OS40IDIyLjYxNyA3OC44IDIxLjkxNyBDIDc4LjIgMjEuMjE3IDc4IDIwLjMxNyA3OC4yIDE5LjMxNyBDIDc4LjUgMTcuMjE3IDgwLjMgMTUuNzE3IDgyLjQgMTUuNzE3IEMgODMuNSAxNS43MTcgODQuMyAxNi4xMTcgODQuOSAxNi43MTcgQyA4NS41IDE3LjQxNyA4NS43IDE4LjMxNyA4NS41IDE5LjMxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5NS4xIDUuNDE3IEwgOTEuOSAyNS43MTcgQyA5MS44IDI2LjExNyA5Mi4xIDI2LjQxNyA5Mi41IDI2LjQxNyBMIDk1LjcgMjYuNDE3IEMgOTYuMiAyNi40MTcgOTYuNyAyNi4wMTcgOTYuOCAyNS41MTcgTCAxMDAgNS42MTcgQyAxMDAuMSA1LjIxNyA5OS44IDQuOTE3IDk5LjQgNC45MTcgTCA5NS44IDQuOTE3IEMgOTUuNCA0LjkxNyA5NS4yIDUuMTE3IDk1LjEgNS40MTcgWiI+PC9wYXRoPjwvc3ZnPg"
+                            alt="">
+                        </div>
+                       <div>
+                        <p>Chekout</p>
+                       </div>
+                    </div>
+                    <div id="buygpay">Buy With
+                        <img id="gpayimg"
+                            src="https://tse4.mm.bing.net/th?id=OIP.kB7pr4BNpOmSi9IxBePqIwHaD4&pid=Api&P=0" alt="">
+                    </div>
+
+                    <div>
+                        <h4>PAY WITH:</h4>
+                        <div class="onlinepayment">
+                            <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_amex.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_discover.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_mastercard.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_paypal.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_visa_b.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_klarna.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/pdp/SupportFiles/L/LOGO-APPLEPAY/LOGO-APPLEPAY_a1.png"
+                                alt="">
+                            <img src="https://images.footlocker.com/content/dam/final/pdp/SupportFiles/L/LOGO-GOOGLEPAY2/LOGO-GOOGLEPAY2_a1.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div id="footbox">
+            <div>
+                <h2>Email Gift Cards</h2>
+                <p>Valid online and at any Foot Locker Inc. brand</p>
+                <button>BUY EMAIL GIFT CARD</button>
+                <h3> ABOUT FOOT LOCKER</h3>
+                -----
+
+
+                <p>About Us</p>
+                <p>Accessibility Statement</p>
+                <p>Career Opportunities</p>
+                <p>Pages Sitemap</p>
+                <p>Products Sitemap 1</p>
+                <p>Products Sitemap 2</p>
+                <p>Products Sitemap 3</p>
+                <p>Privacy Statement</p>
+                <p>(Calif.) Do Not Sell or Share my Personal Information</p>
+                <p>(Calif.) Limit the Use of my Sensitive Personal Data</p>
+                <p>Ad Choices</p>
+                <p>Terms Of Use</p>
+                <h1 id="kadam">KADAM</h1>
+
+            </div>
+
+            <div>
+                <h2> Rewards Program</h2>
+                <p>Get free shipping, rewards, and more with FLX</p>
+                <button>FLX DETAILS</button>
+                <h3>CUSTOMER SERVICE</h3>
+                -----
+                <p>Contact Us</p>
+                <p>Ordering Help</p>
+                <p>Order Status</p>
+                <p>Shipping Info</p>
+                <p>Store Pick Up</p>
+                <p>Returns-Exchanges</p>
+                <p>Help</p>
+                <p>COVID-19 Information</p>
+                <p>Check Gift Card Balance</p>
+
+            </div>
+
+            <div>
+                <h2> Sign Up For Emails</h2>
+                <p>Stay in the loop, wherever you go</p>
+                <button>SIGN UP FOR EMAILS </button>
+                <h3>QUICK LINKS</h3>
+                -----
+
+                <p>Store Locator</p>
+                <p>Text Sign Up</p>
+                <p>Launch 101</p>
+                <p>Klarna</p>
+                <p>Coupons</p>
+                <p>Affiliates</p>
+                <p>Fit Guarantee</p>
+                <p>Military Discount</p>
+                <p>Student Discount</p>
+                <p>Release Calendar</p>
+                <p>Start a Return/Exchange</p>
+            </div>
+
+            <div>
+                <h2>Mobile App</h2>
+                <p>Get ahead of the game with on-the-go shopping</p>
+                <button>MOBILE APP DETAILS</button>
+                <h3>SOCIAL</h3>
+                -----
+                <div class="flex">
+                    <div>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </div>
+                </div>
+                <h3 style="margin-top: 20px;"> PAYMENT METHODS</h3>
+                ------
+                <div class="onlinepayment">
+                    <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_amex.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_discover.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_mastercard.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_paypal.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_visa_b.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/backpages/ic_klarna.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/pdp/SupportFiles/L/LOGO-APPLEPAY/LOGO-APPLEPAY_a1.png"
+                        alt="">
+                    <img src="https://images.footlocker.com/content/dam/final/pdp/SupportFiles/L/LOGO-GOOGLEPAY2/LOGO-GOOGLEPAY2_a1.png"
+                        alt="">
+                </div>
+                <div class="playstore">
+                    <img src="https://www.footlocker.com/built/255/images/shared/ic_logo_AppStore.svg" alt="">
+                    <img src="https://www.footlocker.com/built/255/images/shared/ic_logo_GooglePlay.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <p>Prices subject to change without notice. Products shown may not be available in our stores.</p>
+
+            <img src="https://www.footlocker.com/built/255/images/shared/ic_sheerid.svg" alt="">
+
+        </div>
+    </footer>
+</body>
+
+</html>
+<!-- <script src="product.js"></script>
+ -->
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
+
+    hamburger.addEventListener('click', () => {
+        // Toggle the nav-links class to show or hide the navigation links
+        navLinks.classList.toggle('nav-active');
+
+        // Add animation to each navigation link when the hamburger menu is clicked
+        links.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `fadeIn 0.5s ease-in forwards ${index / 7 + 0.3}s`;
+            }
+        });
+
+        // Animate the hamburger menu to become an X icon
+        hamburger.classList.toggle('toggle');
+    });
+
+
+   const signbt = document.querySelector(".signbt")
+   signbt.addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+   })
+
+</script>
+<script src="cart.js"></script>
